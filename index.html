@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Just Get Over it</title>
+  <link rel="stylesheet" href="./main.css" charset="utf-8">
+  <script src="https://code.jquery.com/jquery-3.1.0.slim.min.js" integrity="sha256-cRpWjoSOw5KcyIOaZNo4i6fZ9tKPhYYb6i5T9RSVJG8=" crossorigin="anonymous"></script>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+</head>
+
+<body class="imover">
+  <div class="main">
+    <span><i>SHIT HAPPENS, GET OVER IT!</i></span>
+    <button type="button" name="I'm over it" id="overit">I'm over it</button>
+  </div>
+
+  <div class="notover">
+    <button type="button" name="Not over it" id="notoverit"><i class="fa fa-times"></i></button>
+  </div>
+
+  <script type="text/javascript">
+    console.log("HE110 CREPPER /(*_*)/");
+    var toggle = true;
+    $(document).ready(function() {
+      window.setInterval(function() {}, 1000);
+    });
+    $('#overit').click(function() {
+      if (toggle) {
+        timerId = setInterval(function() {
+          $('.imover').toggleClass('black');
+        }, 50);
+        $('.main').css('display', 'none');
+        toggle = false;
+      } else {
+        $('.imover').removeClass('black');
+        clearInterval(timerId);
+        toggle = true;
+      }
+    });
+    $('#notoverit').click(function() {
+      $('.main').css('display', 'flex');
+      $('.imover').removeClass('black');
+      clearInterval(timerId);
+    });
+  </script>
+
+</body>
+
+</html>

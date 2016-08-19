@@ -20,6 +20,7 @@ body {
 
 .main span {
   font-size: 32px;
+  font-style: italic;
 }
 
 .main button {

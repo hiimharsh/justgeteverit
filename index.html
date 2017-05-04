@@ -36,7 +36,7 @@
     $('#notoverit').click(function() {
       $('.main').css('display', 'flex');
       $('.notover').css('display', 'none');
-      $('.imover').toggleClass('black');
+      $('.imover').removeClass('black');
       clearInterval(timerId);
     });
   </script>

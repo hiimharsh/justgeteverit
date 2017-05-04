@@ -27,21 +27,16 @@
       window.setInterval(function() {}, 1000);
     });
     $('#overit').click(function() {
-      if (toggle) {
         timerId = setInterval(function() {
           $('.imover').toggleClass('black');
         }, 50);
         $('.main').css('display', 'none');
-        toggle = false;
-      } else {
-        $('.imover').removeClass('black');
-        clearInterval(timerId);
-        toggle = true;
-      }
+        $('.notover').css('display', 'flex');
     });
     $('#notoverit').click(function() {
       $('.main').css('display', 'flex');
-      $('.imover').removeClass('black');
+      $('.notover').css('display', 'none');
+      $('.imover').toggleClass('black');
       clearInterval(timerId);
     });
   </script>
